@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { defineProps, withDefaults } from 'vue';
-import PriceBar from './unit-component/PriceBar.vue';
-import VerticalBar from './decoration/VerticalBar.vue';
+import PriceBar from '@/components/unit-component/PriceBar.vue';
+import VerticalBar from '@/components/decoration/VerticalBar.vue';
 
 type Props = {
   title: string;
@@ -23,7 +23,8 @@ const props = withDefaults(defineProps<Props>(), {
       {{ props.title }}
     </h3>
     <!-- catagory title-->
-    <div id="entry-catagory" class="bg-yellow-400 p-2 rounded-xl mx-2">
+     <!-- Should be drop down after refactor. -->
+    <div id="entry-catagory" class="bg-catagories-food p-2 rounded-xl mx-2">
       <p class="w-auto text-base font-semibold">
         {{ props.catagory }}
       </p>
